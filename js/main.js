@@ -28,8 +28,10 @@ var DESCRIPTIONS_ARRAY = [
   'Вот это тачка!'
 ];
 
+var photosArray = getPhotosArray();
+
 var getRandomInteger = function (min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.round(Math.random() * (max - min)) + min;
 };
 
 var getRandomArrayElement = function (array) {
@@ -70,8 +72,6 @@ var getPhotosArray = function () {
   }
   return array;
 };
-
-var photosArray = getPhotosArray();
 
 var renderPictures = function (array) {
   var pictures = document.querySelector('.pictures');
